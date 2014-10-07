@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/motionlab/catkin_ws/install/setup.sh
+    local-name: /home/motionlab/WildCats/catkin_ws/install/setup.sh

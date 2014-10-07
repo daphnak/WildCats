@@ -2,7 +2,7 @@
 
 message(STATUS "beginner_tutorials: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Ibeginner_tutorials:/home/motionlab/catkin_ws/src/beginner_tutorials/msg;-Istd_msgs:/opt/ros/hydro/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ibeginner_tutorials:/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/msg;-Istd_msgs:/opt/ros/hydro/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -18,7 +18,7 @@ add_custom_target(beginner_tutorials_generate_messages ALL)
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(beginner_tutorials
-  "/home/motionlab/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/msg/Num.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
@@ -26,7 +26,7 @@ _generate_msg_cpp(beginner_tutorials
 
 ### Generating Services
 _generate_srv_cpp(beginner_tutorials
-  "/home/motionlab/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/beginner_tutorials
@@ -53,7 +53,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(beginner_tutorials
-  "/home/motionlab/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/msg/Num.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
@@ -61,7 +61,7 @@ _generate_msg_lisp(beginner_tutorials
 
 ### Generating Services
 _generate_srv_lisp(beginner_tutorials
-  "/home/motionlab/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/beginner_tutorials
@@ -88,7 +88,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS beginner_tutorials_generate_message
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(beginner_tutorials
-  "/home/motionlab/catkin_ws/src/beginner_tutorials/msg/Num.msg"
+  "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/msg/Num.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials
@@ -96,7 +96,7 @@ _generate_msg_py(beginner_tutorials
 
 ### Generating Services
 _generate_srv_py(beginner_tutorials
-  "/home/motionlab/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
+  "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/srv/AddTwoInts.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/beginner_tutorials

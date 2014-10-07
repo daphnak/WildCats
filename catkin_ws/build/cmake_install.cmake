@@ -1,8 +1,8 @@
-# Install script for directory: /home/motionlab/catkin_ws/src
+# Install script for directory: /home/motionlab/WildCats/catkin_ws/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/motionlab/catkin_ws/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/motionlab/WildCats/catkin_ws/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,38 +44,38 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/motionlab/catkin_ws/install/_setup_util.py")
-FILE(INSTALL DESTINATION "/home/motionlab/catkin_ws/install" TYPE PROGRAM FILES "/home/motionlab/catkin_ws/build/catkin_generated/installspace/_setup_util.py")
+   "/home/motionlab/WildCats/catkin_ws/install/_setup_util.py")
+FILE(INSTALL DESTINATION "/home/motionlab/WildCats/catkin_ws/install" TYPE PROGRAM FILES "/home/motionlab/WildCats/catkin_ws/build/catkin_generated/installspace/_setup_util.py")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/motionlab/catkin_ws/install/env.sh")
-FILE(INSTALL DESTINATION "/home/motionlab/catkin_ws/install" TYPE PROGRAM FILES "/home/motionlab/catkin_ws/build/catkin_generated/installspace/env.sh")
+   "/home/motionlab/WildCats/catkin_ws/install/env.sh")
+FILE(INSTALL DESTINATION "/home/motionlab/WildCats/catkin_ws/install" TYPE PROGRAM FILES "/home/motionlab/WildCats/catkin_ws/build/catkin_generated/installspace/env.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/motionlab/catkin_ws/install/setup.bash")
-FILE(INSTALL DESTINATION "/home/motionlab/catkin_ws/install" TYPE FILE FILES "/home/motionlab/catkin_ws/build/catkin_generated/installspace/setup.bash")
+   "/home/motionlab/WildCats/catkin_ws/install/setup.bash")
+FILE(INSTALL DESTINATION "/home/motionlab/WildCats/catkin_ws/install" TYPE FILE FILES "/home/motionlab/WildCats/catkin_ws/build/catkin_generated/installspace/setup.bash")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/motionlab/catkin_ws/install/setup.sh")
-FILE(INSTALL DESTINATION "/home/motionlab/catkin_ws/install" TYPE FILE FILES "/home/motionlab/catkin_ws/build/catkin_generated/installspace/setup.sh")
+   "/home/motionlab/WildCats/catkin_ws/install/setup.sh")
+FILE(INSTALL DESTINATION "/home/motionlab/WildCats/catkin_ws/install" TYPE FILE FILES "/home/motionlab/WildCats/catkin_ws/build/catkin_generated/installspace/setup.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/motionlab/catkin_ws/install/setup.zsh")
-FILE(INSTALL DESTINATION "/home/motionlab/catkin_ws/install" TYPE FILE FILES "/home/motionlab/catkin_ws/build/catkin_generated/installspace/setup.zsh")
+   "/home/motionlab/WildCats/catkin_ws/install/setup.zsh")
+FILE(INSTALL DESTINATION "/home/motionlab/WildCats/catkin_ws/install" TYPE FILE FILES "/home/motionlab/WildCats/catkin_ws/build/catkin_generated/installspace/setup.zsh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CPACK_ABSOLUTE_DESTINATION_FILES
-   "/home/motionlab/catkin_ws/install/.rosinstall")
-FILE(INSTALL DESTINATION "/home/motionlab/catkin_ws/install" TYPE FILE FILES "/home/motionlab/catkin_ws/build/catkin_generated/installspace/.rosinstall")
+   "/home/motionlab/WildCats/catkin_ws/install/.rosinstall")
+FILE(INSTALL DESTINATION "/home/motionlab/WildCats/catkin_ws/install" TYPE FILE FILES "/home/motionlab/WildCats/catkin_ws/build/catkin_generated/installspace/.rosinstall")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -88,8 +88,8 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/home/motionlab/catkin_ws/build/gtest/cmake_install.cmake")
-  INCLUDE("/home/motionlab/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
+  INCLUDE("/home/motionlab/WildCats/catkin_ws/build/gtest/cmake_install.cmake")
+  INCLUDE("/home/motionlab/WildCats/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -99,7 +99,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/motionlab/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/motionlab/WildCats/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/motionlab/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/motionlab/WildCats/catkin_ws/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
