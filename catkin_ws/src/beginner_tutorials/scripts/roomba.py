@@ -26,7 +26,7 @@ def roomba():
             twist.angular.z = 1.5
         else:
             twist.linear.x = 1
-            twise.angular.z = 0.0
+            twist.angular.z = 0.0
         pub.publish(twist)
         "rospy.loginfo(twist)"
         r.sleep()
