@@ -1,0 +1,166 @@
+--------------------------------------------------------------------------------
+Node [/roomber_12216_1412360630879]
+Publications: 
+ * /mobile_base/command/velocity [geometry_msgs/Twist]
+ * /rosout [rosgraph_msgs/Log]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+
+Services: 
+ * /roomber_12216_1412360630879/get_loggers
+ * /roomber_12216_1412360630879/set_logger_level
+
+
+contacting node http://scara:59561/ ...
+Pid: 12216
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://scara:37438/)
+    * direction: inbound
+    * transport: TCPROS
+
+--------------------------------------------------------------------------------
+Node [/gazebo]
+Publications: 
+ * /camera/rgb/image_raw/compressedDepth/parameter_updates [dynamic_reconfigure/Config]
+ * /camera/rgb/image_raw [sensor_msgs/Image]
+ * /odom [nav_msgs/Odometry]
+ * /camera/rgb/image_raw/compressed [sensor_msgs/CompressedImage]
+ * /camera/depth/camera_info [sensor_msgs/CameraInfo]
+ * /mobile_base/sensors/imu_data [sensor_msgs/Imu]
+ * /camera/rgb/image_raw/compressed/parameter_updates [dynamic_reconfigure/Config]
+ * /camera/rgb/camera_info [sensor_msgs/CameraInfo]
+ * /gazebo/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /camera/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /camera/rgb/image_raw/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /joint_states [sensor_msgs/JointState]
+ * /rosout [rosgraph_msgs/Log]
+ * /camera/depth/image_raw [sensor_msgs/Image]
+ * /tf [tf2_msgs/TFMessage]
+ * /mobile_base/events/bumper [kobuki_msgs/BumperEvent]
+ * /camera/parameter_updates [dynamic_reconfigure/Config]
+ * /camera/depth/points [sensor_msgs/PointCloud2]
+ * /camera/rgb/image_raw/compressedDepth [sensor_msgs/CompressedImage]
+ * /camera/rgb/image_raw/compressedDepth/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /mobile_base/events/cliff [kobuki_msgs/CliffEvent]
+ * /camera/rgb/image_raw/theora [theora_image_transport/Packet]
+ * /gazebo/link_states [gazebo_msgs/LinkStates]
+ * /camera/rgb/image_raw/theora/parameter_updates [dynamic_reconfigure/Config]
+ * /gazebo/model_states [gazebo_msgs/ModelStates]
+ * /clock [rosgraph_msgs/Clock]
+ * /camera/rgb/image_raw/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /gazebo/parameter_updates [dynamic_reconfigure/Config]
+
+Subscriptions: 
+ * /gazebo/set_model_state [unknown type]
+ * /gazebo/set_link_state [unknown type]
+ * /mobile_base/commands/reset_odometry [unknown type]
+ * /clock [rosgraph_msgs/Clock]
+ * /mobile_base/commands/velocity [geometry_msgs/Twist]
+ * /mobile_base/commands/motor_power [unknown type]
+
+Services: 
+ * /gazebo/apply_joint_effort
+ * /gazebo/get_physics_properties
+ * /gazebo/set_link_state
+ * /gazebo/set_joint_properties
+ * /gazebo/get_world_properties
+ * /gazebo/set_logger_level
+ * /gazebo/reset_world
+ * /camera/rgb/image_raw/compressed/set_parameters
+ * /camera/rgb/image_raw/compressedDepth/set_parameters
+ * /gazebo/set_model_configuration
+ * /camera/rgb/image_raw/theora/set_parameters
+ * /gazebo/set_parameters
+ * /gazebo/spawn_sdf_model
+ * /gazebo/unpause_physics
+ * /gazebo/spawn_urdf_model
+ * /camera/set_parameters
+ * /gazebo/get_loggers
+ * /gazebo/get_joint_properties
+ * /gazebo/pause_physics
+ * /gazebo/set_physics_properties
+ * /gazebo/set_model_state
+ * /gazebo/reset_simulation
+ * /gazebo/delete_model
+ * /gazebo/get_link_properties
+ * /gazebo/set_link_properties
+ * /gazebo/apply_body_wrench
+ * /gazebo/get_link_state
+ * /gazebo/clear_body_wrenches
+ * /camera/set_camera_info
+ * /gazebo/spawn_gazebo_model
+ * /gazebo/get_model_state
+ * /gazebo/clear_joint_forces
+ * /gazebo/get_model_properties
+
+
+contacting node http://scara:37438/ ...
+Pid: 10774
+Connections:
+ * topic: /rosout
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo
+    * direction: outbound
+    * transport: INTRAPROCESS
+ * topic: /clock
+    * to: /mobile_base_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /rosout
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /cmd_vel_mux
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /bumper2pointcloud
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /robot_state_publisher
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /laserscan_nodelet_manager
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /depthimage_to_laserscan
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /rqt_gui_py_node_11208
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /roomber_12216_1412360630879
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /joint_states
+    * to: /robot_state_publisher
+    * direction: outbound
+    * transport: TCPROS
+ * topic: /clock
+    * to: /gazebo (http://scara:37438/)
+    * direction: inbound
+    * transport: INTRAPROCESS
+ * topic: /mobile_base/commands/velocity
+    * to: /mobile_base_nodelet_manager (http://scara:46025/)
+    * direction: inbound
+    * transport: TCPROS
+ * topic: /mobile_base/commands/velocity
+    * to: /rqt_gui_py_node_11208 (http://scara:39111/)
+    * direction: inbound
+    * transport: TCPROS
+
