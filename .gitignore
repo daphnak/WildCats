@@ -218,3 +218,4 @@ pip-log.txt
 
 # Add vids as needed
 *.mp4
+!lab4_spedup.mp4
