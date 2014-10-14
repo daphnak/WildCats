@@ -5,8 +5,6 @@ from std_msgs.msg import String, Header
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import Point
 from geometry_msgs.msg import PointStamped
-from sensor_msgs.msg import PointCloud2, PointField
-from sensor_msgs import point_cloud2
 
 PUB_MIN_POINT = None
 PUB_MOTION = None
@@ -63,6 +61,8 @@ def callback(response):
 def wildcat():
     rospy.init_node('wildcat', anonymous=True)
     rospy.Subscriber('/camera/depth_registered/points', PointCloud2, callback)
+    rospy.Subscriber('/odom', Odometry, show_text_in_rviz)
+
     global PUB_MIN_POINT
     PUB_MIN_POINT = rospy.Publisher('minPoints', PointStamped)
     global PUB_MOTION
