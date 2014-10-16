@@ -3,68 +3,69 @@ import rospy
 import math
 from std_msgs.msg import String, Header
 from geometry_msgs.msg import Twist
-from geometry_msgs.msg import Point
-from geometry_msgs.msg import PointStamped
+from nav_msgs.msg import Odometry
 
-PUB_MIN_POINT = None
 PUB_MOTION = None
-# header: 
-#   seq: 66855
-#   stamp: 
-#     secs: 5578
-#     nsecs: 970000000
-#   frame_id: camera_depth_optical_frame
+STATE =0
+def callback(data):
 
+    print'********'
+    x = data.pose.pose.position.x
+    y = data.pose.pose.position.y
+    z = data.pose.pose.orientation.z
+    print z
 
-def callback(response):
-        print'********'
-        gen = point_cloud2.read_points(response,skip_nans=True)
+    # angle constants
+    DEFAULT_ANGLE_THRESH = 0.01
+    ESCAPE_ANGLE_THRESH = 0.1
 
-        try:
-            firstPoint = gen.next()
-            minDist = getDistance(firstPoint)
-            minPoint = firstPoint
-            for point in gen:
-                distance = getDistance(point)
-                if distance < minDist:
-                    if (point[1] < 0.1):
-                        minDist = distance
-                        minPoint = point
-            print minDist
-            print minPoint
+    #
+    DEFAULT_LINEAR_THRESH = 0.02
+    ESCAPE_LINEAR_THRESH = 0.1
+
+    ANGLE_THRESH = DEFAULT_ANGLE_THRESH
+    LINEAR_THRESH = DEFAULT_LINEAR_THRESH
+    global STATE
+    if STATE == 1:
+        ANGLE_THRESH = ESCAPE_ANGLE_THRESH
+        LINEAR_THRESH = ESCAPE_LINEAR_THRESH
+    # check if we are near y axis. If not,
+        # check if we are within 0.02 arbitrary units of facing z = 0,
+    # if so, head forward some good amount (0.5)
+    # otherwise turn clockwise 0.1d
+    twist = Twist()
+    print "x: " , x 
+    print "y: " , y
+    print "z: " , z
+    if x < 0.2 && y < 0.2 :
+        return
+    if abs(x) < LINEAR_THRESH:
+        if abs(0.7 - abs(z)) < ANGLE_THRESH:
+            STATE = 1
+
+            twist.linear.x = -0.5 * y
             
-            # Create minimum distance point object for visualization purposes
-            pointMin = Point()
-            pointMin.x = minPoint[0]
-            pointMin.y = minPoint[1]
-            pointMin.z = minPoint[2]
-            result = PointStamped()
-            result.point = pointMin
-            header = Header()
-            header.frame_id = 'camera_depth_optical_frame'
-            result.header = header 
-            PUB_MIN_POINT.publish(result)
+            print("1")
+        else:
+            twist.angular.z = max(0.5 * abs(0.7 -abs(z)) , 0.001)
+            print 2
+    else:
+        if abs(z) < ANGLE_THRESH:
+            STATE=0
 
-            # Move towards nearest point
-            twist = Twist()
-            if pointMin.x > 0.2:
-                twist.angular.z = -0.7
-            elif pointMin.x < -0.2:
-                twist.angular.z = 0.7
-            elif pointMin.z > 0.2:
-                twist.linear.x = 0.2 # or make negative to run away from things
+            twist.linear.x = -0.5 * x
+            print 3
+        else:
+            twist.angular.z = max(0.5 * (abs(z)) , 0.001)
+            print 4
 
-            PUB_MOTION.publish(twist)
-        except StopIteration:
-            pass
-
+    
+    PUB_MOTION.publish(twist)
+     
 def wildcat():
-    rospy.init_node('wildcat', anonymous=True)
-    rospy.Subscriber('/camera/depth_registered/points', PointCloud2, callback)
-    rospy.Subscriber('/odom', Odometry, show_text_in_rviz)
+    rospy.init_node('wildcat_goes_home', anonymous=True)
+    rospy.Subscriber('/odom', Odometry, callback)
 
-    global PUB_MIN_POINT
-    PUB_MIN_POINT = rospy.Publisher('minPoints', PointStamped)
     global PUB_MOTION
     PUB_MOTION = rospy.Publisher('mobile_base/commands/velocity', Twist)
     rospy.spin()
@@ -77,3 +78,4 @@ if __name__ == '__main__':
     try:
         wildcat()
     except rospy.ROSInterruptException: pass
+ 
