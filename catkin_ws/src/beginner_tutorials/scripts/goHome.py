@@ -37,7 +37,7 @@ def callback(data):
     print "x: " , x 
     print "y: " , y
     print "z: " , z
-    if x < 0.2 && y < 0.2 :
+    if x < 0.2 and y < 0.2 :
         return
     if abs(x) < LINEAR_THRESH:
         if abs(0.7 - abs(z)) < ANGLE_THRESH:
