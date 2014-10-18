@@ -24,17 +24,34 @@ def callback(data):
     quat_array = (quat.x, quat.y, quat.z, quat.w)
     angles = euler_from_quaternion(quat_array)
     yaw = angles[2] 
-    print yaw
+    print "yaw ", yaw
+    print "atan ", math.atan2(x, y)
+    
 
-    yawTarget = math.atan2(y,x) + math.pi
+    yawTarget = math.pi/2 + math.atan2(x, abs(y)) #if x > 0 else math.pi / 2 - math.atan2(x, y)
+    if y >= 0:
+        yawTarget*= -1
+    """
+    if x > 0:
+        if y > 0:
+            yawTarget = 2*math.pi - math.atan2(x,y)
+        else:
+            yawTarget = math.atan2(x,y) + math.pi/2.0
+    else
+    """
+
+    if yawTarget > math.pi:
+        print "changing yaw"
+        yawTarget-= 2*math.pi
+    # yawTarget guaranteed to be in (-pi, pi]
     print yawTarget
     
     if abs(yaw - yawTarget) < 0.5:
         twist.linear.x = 0.2
-	print 1
+        print 1
     else:
-	twist.angular.z = -.4 if yaw > yawTarget else .4 
-	print 2
+        twist.angular.z = 0.4 if yawTarget > 0 else -0.4
+        print 2
     
     PUB_MOTION.publish(twist)
      
