@@ -1,0 +1,7 @@
+- Small garbage can that will fit on turtlebot
+    Similar to this: ($5)
+    http://www.containerstore.com/shop/trashRecycling/wastebaskets?productId=10007312&N=70652
+- Velcro tape to affix can and laptop to bot
+    Similar to this: ($3/3ft)
+    http://www.michaels.com/10354421.html#q=velcro&start=1
+- a few zipties for dangling cables would be nice
