@@ -41,6 +41,22 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials/action" TYPE FILE FILES "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/action/Goto.action")
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials/msg" TYPE FILE FILES
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoAction.msg"
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoActionGoal.msg"
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoActionResult.msg"
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoActionFeedback.msg"
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoGoal.msg"
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoResult.msg"
+    "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/msg/GotoFeedback.msg"
+    )
+ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+
+IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/beginner_tutorials/cmake" TYPE FILE FILES "/home/motionlab/WildCats/catkin_ws/build/beginner_tutorials/catkin_generated/installspace/beginner_tutorials-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

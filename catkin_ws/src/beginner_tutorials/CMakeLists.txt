@@ -9,6 +9,10 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
 	message_generation
+  genmsg
+  actionlib_msgs
+  actionlib
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -63,10 +67,16 @@ find_package(catkin REQUIRED COMPONENTS
 #   Action2.action
 # )
 
+add_action_files(DIRECTORY action FILES
+    Goto.action
+ )
+
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
    std_msgs
+   actionlib_msgs
+   geometry_msgs
  )
 
 ###################################
@@ -78,10 +88,12 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
+
+
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES beginner_tutorials
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime actionlib_msgs geometry_msgs
 #  DEPENDS system_lib
 )
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import rospy
 import math
+import actionlib
+
 from std_msgs.msg import String, Header
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import PoseStamped
@@ -49,60 +51,24 @@ def sendToOnce():
     mbag.goal.target_pose = ps
 
 
+
+
     print mbag
     PUB_GOAL.publish(mbag)
-
-
-
-'''
-def __init__(self):
-self.msg = PoseStamped()
-self.msg.header.frame_id = "/map"
-self.pub_ = rospy.Publisher('/move_base_simple/goal', PoseStamped)
-rospy.Subscriber('/recognizer/output', String, self.speechCb)
-rospy.spin()
-
- def setMsg(self, goal):
-self.msg.pose.position.x = goals[goal][0]
-self.msg.pose.position.y = goals[goal][1]
-self.msg.pose.position.z = goals[goal][2]
-q = quaternion_from_euler(0, 0, goals[goal][3], 'sxyz')
-self.msg.pose.orientation.x = q[0]
-self.msg.pose.orientation.y = q[1]
-self.msg.pose.orientation.z = q[2]
-self.msg.pose.orientation.w = q[3]
-
-
-def speechCb(self, msg):
-rospy.loginfo(msg.data)
-self.msg.header.stamp = rospy.Time.now()
-if msg.data.find("lab") > -1:
-self.setMsg("The Lab")
-elif msg.data.find("hallway") > -1:
-self.setMsg("The Hallway")
-elif msg.data.find("ken") > -1:
-self.setMsg("Ken's Desk")
-elif msg.data.find("nick") > -1:
-self.setMsg("Nick's Office")
-else:
-rospy.loginfo("unknown goal!")
-return
-self.pub_.publish(self.msg)
-'''
     
      
 def wildcat():
-    rospy.init_node('wildcat_goes_home', anonymous=True)
-    
-    
+    rospy.init_node('WildCat_Teleport', anonymous=True)
+    #client = actionlib.SimpleActionClient('WildCat_Teleport', sendToOnce)
+    #client.wait_for_server()
 
     global PUB_GOAL
-    # PUB_GOAL = rospy.Publisher('/move_base/goal', PoseStamped)
+    #PUB_GOAL = rospy.Publisher('/move_base_simple/goal', PoseStamped)
     PUB_GOAL = rospy.Publisher('/move_base/goal', MoveBaseActionGoal)
 
-    # rospy.Subscriber('/odom', Odometry, callback)
-    for i in range(100):
-        sendToOnce()
+    rospy.Subscriber('/odom', Odometry, callback)
+    #for i in range(100):
+    #    sendToOnce()
         # pass
     
     rospy.spin()
