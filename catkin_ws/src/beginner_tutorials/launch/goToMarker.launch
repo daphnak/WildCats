@@ -1,0 +1,4 @@
+<launch>
+	<node name="drop" pkg="topic_tools" type="drop" output="screen" args="/visualization_marker 0 10 /wildcat_visualization_marker"/>
+	<node name="goToMarker" pkg="beginner_tutorials" type="goToMarker.py" output="screen"/>
+</launch>
