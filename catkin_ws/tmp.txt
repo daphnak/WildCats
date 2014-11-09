@@ -1,0 +1,24 @@
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] [  0%] Built target actionlib_msgs_generate_messages_py
+Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] [  0%] [  0%] [  0%] Built target actionlib_msgs_generate_messages_cpp
+Built target geometry_msgs_generate_messages_cpp
+Built target actionlib_msgs_generate_messages_lisp
+Built target std_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[ 37%] Built target beginner_tutorials_generate_messages_py
+[ 68%] Built target beginner_tutorials_generate_messages_cpp
+[100%] Built target beginner_tutorials_generate_messages_lisp
+[100%] Built target beginner_tutorials_generate_messages
+Base path: /home/motionlab/WildCats/catkin_ws
+Source space: /home/motionlab/WildCats/catkin_ws/src
+Build space: /home/motionlab/WildCats/catkin_ws/build
+Devel space: /home/motionlab/WildCats/catkin_ws/devel
+Install space: /home/motionlab/WildCats/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/motionlab/WildCats/catkin_ws/build"
+####
+####
+#### Running command: "make -j8 -l8" in "/home/motionlab/WildCats/catkin_ws/build"
+####

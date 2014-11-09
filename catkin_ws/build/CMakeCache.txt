@@ -300,7 +300,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/hydro/lib/libtf2.so
+lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/hydro/share/message_filters/cmake
@@ -346,6 +346,27 @@ rospy_DIR:PATH=/opt/ros/hydro/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/hydro/share/rostime/cmake
+
+//Value Computed by CMake
+rqt_bag_BINARY_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/build/rqt_woz_2
+
+//Value Computed by CMake
+rqt_bag_SOURCE_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/src/rqt_woz_2
+
+//The directory containing a CMake configuration file for rqt_gui.
+rqt_gui_DIR:PATH=/opt/ros/hydro/share/rqt_gui/cmake
+
+//The directory containing a CMake configuration file for rqt_gui_py.
+rqt_gui_py_DIR:PATH=/opt/ros/hydro/share/rqt_gui_py/cmake
+
+//Value Computed by CMake
+rqt_woz_BINARY_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/build/rqt_woz
+
+//Value Computed by CMake
+rqt_woz_SOURCE_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/src/rqt_woz
+
+//The directory containing a CMake configuration file for rqto_gui.
+rqto_gui_DIR:PATH=rqto_gui_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/hydro/share/sensor_msgs/cmake

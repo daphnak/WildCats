@@ -1,0 +1,8 @@
+prefix=/home/motionlab/WildCats/catkin_ws/devel
+
+Name: rqt_bag
+Description: Description of rqt_bag
+Version: 0.3.10
+Cflags: 
+Libs: -L/home/motionlab/WildCats/catkin_ws/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/motionlab/WildCats/catkin_ws/devel
+
+Name: rqt_woz
+Description: Description of rqt_woz
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/motionlab/WildCats/catkin_ws/devel/lib 
+Requires: 
