@@ -14,6 +14,7 @@ from python_qt_binding.QtCore import QSignalMapper, qWarning, Signal
 import os
 import time
 import math
+from 
 
 
 class WoZPlugin(Plugin):
@@ -38,9 +39,7 @@ class WoZPlugin(Plugin):
         box_9 = QtGui.QHBoxLayout()
         box_10 = QtGui.QHBoxLayout()
 
-        # box_1.addItem(QtGui.QSpacerItem(15,2))
         box_1.addWidget(self.create_button('print nice', self.printCallback))
-        box_1.addItem(QtGui.QSpacerItem(445,2))
 
         self._widget.setObjectName('TrashbotGUI')
         self._widget.setLayout(large_box)
