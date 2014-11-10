@@ -1,0 +1,48 @@
+export ROS_PACKAGE_PATH=/home/motionlab/ros_workspace/sandbox/beginner_tutorials:$ROS_PACKAGE_PATH
+
+
+
+
+ roslaunch turtlebot_bringup minimal.launch
+
+  roslaunch turtlebot_bringup 3dsensor.launch
+
+
+key-joystick:
+ roslaunch kobuki_keyop keyop.launch
+
+
+ODOM:
+rosrun robot_pose_ekf robot_pose_ekf
+
+navigation:
+roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/WildCats/maps/003d.map.yaml
+To see naviagation in rviz: roslaunch turtlebot_rviz_launchers view_navigation.launch
+
+
+
+
+rosrun tf static_transform_publisher -0.115 0 0.0 0 base_link openni_depth_frame 100
+
+child: kinect
+parnt map
+Camera Coordinates/Orientation
+
+header: 
+  seq: 15
+  stamp: 
+    secs: 1415570192
+    nsecs: 333429279
+  frame_id: map
+pose: 
+  position: 
+    x: 1.76746785641
+    y: -0.463567376137
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.913060792068
+    w: -0.407823478955
+
+
