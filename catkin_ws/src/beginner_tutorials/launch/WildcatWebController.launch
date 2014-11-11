@@ -1,0 +1,6 @@
+<launch>
+	<node name="mjpeg_server_node" pkg="mjpeg_server" type="mjpeg_server" output="screen"/>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+	<include file="$(find openni_launch)/launch/openni.launch"/>
+</launch>
+
