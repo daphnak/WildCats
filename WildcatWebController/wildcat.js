@@ -35,7 +35,7 @@ function init() {
     url : 'ws://128.208.7.174:9090'
   });
 
-  listenToOdom();
+  // listenToOdom();
 
   rosLocal.on('connection', function() {
     console.log('Connected to local websocket server.');
@@ -76,7 +76,6 @@ function init() {
     serverName : '/move_base'
   });
 
-
   $('#forwardButton').mousedown(sendForward);
   $('#backButton').mousedown(sendBackwards);
   $('#leftButton').mousedown(turnLeft);
@@ -84,18 +83,18 @@ function init() {
   $('#stopButton').mousedown(stopMotion);
 }
 
-function listenToOdom() {
-  var listener = new ROSLIB.Topic({
-    ros : rosRobot,
-    name : '/odom',
-    messageType : 'Odometery'
-  });
+// function listenToOdom() {
+//   var listener = new ROSLIB.Topic({
+//     ros : rosRobot,
+//     name : '/odom',
+//     messageType : 'Odometery'
+//   });
 
-  listener.subscribe(function(message) {
-    console.log('Received message on ' + listener.name + ': ' + message.data);
-    currentPos = message
-  });
-}
+//   listener.subscribe(function(message) {
+//     console.log('Received message on ' + listener.name + ': ' + message.data);
+//     currentPos = message
+//   });
+// }
 
 function stopMotion() {
   var cmdPose = new ROSLIB.Topic({
