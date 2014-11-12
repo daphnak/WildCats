@@ -1,11 +1,11 @@
 export ROS_PACKAGE_PATH=/home/motionlab/ros_workspace/sandbox/beginner_tutorials:$ROS_PACKAGE_PATH
 
+rosrun map_server map_server /home/turtlebot/WildCats/maps/003d.map.pgm 0.025
 
 
+roslaunch turtlebot_bringup minimal.launch
 
- roslaunch turtlebot_bringup minimal.launch
-
-  roslaunch turtlebot_bringup 3dsensor.launch
+roslaunch turtlebot_bringup 3dsensor.launch
 
 
 key-joystick:

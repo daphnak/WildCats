@@ -1,0 +1,21 @@
+#rightColumn {
+	width: 45%;
+	float: left;
+}
+
+#leftColumn {
+	width: 45%;
+	float: left;
+}
+
+#nav {
+	width: 90%;
+}
+
+#mjpeg {
+	width: 90%;
+}
+
+#stopButton {
+	background-color: red;
+}

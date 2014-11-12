@@ -10,11 +10,27 @@
     <script type="text/javascript" src="http://cdn.robotwebtools.org/nav2djs/current/nav2d.min.js"></script>
 <script type="text/javascript" src="http://cdn.robotwebtools.org/mjpegcanvasjs/current/mjpegcanvas.min.js"></script>
     <script type="text/javascript" src="wildcat.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="wildcat.css">
   </head>
 
   <body>
     <h1>Stuff</h1>
-    <div id="nav"></div>
-    <div id="mjpeg"></div>
+
+    <div id="rightColumn">
+      <div id="nav"></div>
+    </div>
+
+
+    <div id="leftColumn">
+      <div id="mjpeg"></div>
+      <div id="navbuttons">
+        <input id = "forwardButton" type="button" value="Forward">
+        <input id = "backButton" type="button" value="Backward">
+        <input id = "leftButton" type="button" value="Turn Left">
+        <input id = "rightButton" type="button" value="Turn Right">
+        <input id = "stopButton" type="button" value="E-STOP">
+      </div>
+    </div>
   </body>
 </html>
