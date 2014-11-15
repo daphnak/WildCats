@@ -17,6 +17,7 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "beginner_tutorials/cmake/beginner_tutorials-genmsg.cmake"
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/order_packages.cmake"
+  "pocketsphinx/catkin_generated/package.cmake"
   "rqt_woz/catkin_generated/package.cmake"
   "rqt_woz/catkin_generated/setup_py_interrogation.cmake"
   "/home/motionlab/WildCats/catkin_ws/devel/share/beginner_tutorials/cmake/beginner_tutorials-msg-paths.cmake"
@@ -24,6 +25,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/CMakeLists.txt"
   "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/action/Goto.action"
   "/home/motionlab/WildCats/catkin_ws/src/beginner_tutorials/package.xml"
+  "/home/motionlab/WildCats/catkin_ws/src/pocketsphinx/CMakeLists.txt"
+  "/home/motionlab/WildCats/catkin_ws/src/pocketsphinx/package.xml"
   "/home/motionlab/WildCats/catkin_ws/src/rqt_woz/CMakeLists.txt"
   "/home/motionlab/WildCats/catkin_ws/src/rqt_woz/package.xml"
   "/home/motionlab/WildCats/catkin_ws/src/rqt_woz/setup.py"
@@ -182,6 +185,7 @@ SET(CMAKE_MAKEFILE_OUTPUTS
 SET(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "pocketsphinx/CMakeFiles/CMakeDirectoryInformation.cmake"
   "rqt_woz/CMakeFiles/CMakeDirectoryInformation.cmake"
   "beginner_tutorials/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -194,7 +198,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/tests.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "rqt_woz/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
+  "pocketsphinx/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
   "beginner_tutorials/CMakeFiles/actionlib_generate_messages_cpp.dir/DependInfo.cmake"
   "beginner_tutorials/CMakeFiles/actionlib_generate_messages_lisp.dir/DependInfo.cmake"
   "beginner_tutorials/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake"

@@ -320,6 +320,12 @@ openni_tracker_SOURCE_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/src/openni_t
 //The directory containing a CMake configuration file for orocos_kdl.
 orocos_kdl_DIR:PATH=/opt/ros/hydro/share/orocos_kdl
 
+//Value Computed by CMake
+pocketsphinx_BINARY_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/build/pocketsphinx
+
+//Value Computed by CMake
+pocketsphinx_SOURCE_DIR:STATIC=/home/motionlab/WildCats/catkin_ws/src/pocketsphinx
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/hydro/share/rosconsole/cmake
 
@@ -496,7 +502,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=4
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
