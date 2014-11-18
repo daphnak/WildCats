@@ -203,10 +203,10 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 NOSETESTS:FILEPATH=/usr/bin/nosetests
 
 //Path to a file.
-Nite_INCLUDEDIR:PATH=Nite_INCLUDEDIR-NOTFOUND
+Nite_INCLUDEDIR:PATH=/usr/include/nite
 
 //Path to a library.
-Nite_LIBRARY:FILEPATH=Nite_LIBRARY-NOTFOUND
+Nite_LIBRARY:FILEPATH=/usr/lib/libXnVNite_1_3_1.so
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
@@ -300,7 +300,7 @@ gtest_force_shared_crt:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //Path to a library.
-lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+lib:FILEPATH=/opt/ros/hydro/lib/libtf2.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/hydro/share/message_filters/cmake
@@ -502,7 +502,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

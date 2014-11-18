@@ -22,7 +22,7 @@ To see naviagation in rviz: roslaunch turtlebot_rviz_launchers view_navigation.l
 
 
 
-rosrun tf static_transform_publisher -0.115 0 0.0 0 base_link openni_depth_frame 100
+rosrun tf static_transform_publisher -0.115 0 0.0 0 camera_link openni_depth_frame 100
 
 child: kinect
 parnt map
@@ -46,3 +46,24 @@ pose:
     w: -0.407823478955
 
 
+
+
+transforms: 
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1416339764
+        nsecs: 824341949
+      frame_id: openni_depth_frame
+    child_frame_id: head_5
+    transform: 
+      translation: 
+        x: 1.22664908444
+        y: -0.228392665288
+        z: 0.51268189564
+      rotation: 
+        x: 0.158674545603
+        y: 0.504336639108
+        z: 0.700837427731
+        w: 0.478846366721

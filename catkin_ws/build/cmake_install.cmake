@@ -92,6 +92,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/motionlab/WildCats/catkin_ws/build/pocketsphinx/cmake_install.cmake")
   INCLUDE("/home/motionlab/WildCats/catkin_ws/build/rqt_woz/cmake_install.cmake")
   INCLUDE("/home/motionlab/WildCats/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
+  INCLUDE("/home/motionlab/WildCats/catkin_ws/build/openni_tracker/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
