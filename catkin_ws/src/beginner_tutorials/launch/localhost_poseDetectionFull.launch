@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find beginner_tutorials)/launch/localhost_poseDetectionPartial.launch"/>
+	<node name="detectPose" pkg="beginner_tutorials" type="detectPose.py" output="screen" />
+</launch>

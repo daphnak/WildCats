@@ -3,6 +3,7 @@ import rospy
 from tf2_msgs.msg import TFMessage
 from time import time
 from  std_msgs.msg import String
+from geometry_msgs.msg import *
 
 PEOPLE_MAP = {}
 PUB_POSE = None
@@ -43,17 +44,23 @@ class Person:
             # if self.poseDetected() and not self.hit:
             #     self.hit = True
             #     # print "Nice", self.poseHit
-            print "Pose detected: pose foo" #, self.poseHit 
+            # print "Pose detected: pose foo" #, self.poseHit 
         else:
             self.hit = False
             self.poseHit = 0
-            print "\tNo pose detected"
+            # print "\tNo pose detected"
 
     def poseDetected(self):
         return True if self.poseHit > Person.POSE_THRESHOLD else False
 
     def getPose(self):
-        return "person %s hit a pose" % self.personNum
+        p = Point()
+        p.x = self.parts["head"].x
+        p.y = self.parts["head"].y
+        p.z = self.parts["head"].z
+
+        return p
+         
 
 def messageHandler(message):
     global PEOPLE_MAP
@@ -88,7 +95,7 @@ def wildcat():
     rospy.init_node('poseDetector', anonymous=True)
     rospy.Subscriber('/tf', TFMessage, messageHandler)
     global PUB_POSE
-    PUB_POSE = rospy.Publisher('/wildcat_detected_poses', String)
+    PUB_POSE = rospy.Publisher('/wildcat_detected_poses', Point)
     rospy.spin()
 
 
