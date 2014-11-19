@@ -1,7 +1,7 @@
 <launch>
 	<arg name="tf_x" default="1.2" />
 	<arg name="tf_y" default="-0.2" />
-	<arg name="tf_z" default="0.5" />
+	<arg name="tf_z" default="1.5" />
 	<arg name="tf_qx" default="0.15" />
 	<arg name="tf_qy" default="0.5" />
 	<arg name="tf_qz" default="0.7" />
@@ -12,5 +12,5 @@
 
 	<include file="$(find openni_launch)/launch/openni.launch"/>
 	<node name="openni_tracker" pkg="openni_tracker" type="openni_tracker" output="screen"/>
-	<node name="cameraToKinect" pkg="tf" type="static_transform_publisher" args=" $(arg tf_x) $(arg tf_y) $(arg tf_z) $(arg tf_qx) $(arg tf_qy) $(arg tf_qz) $(arg tf_parentFrameId) $(arg tf_childFrameId) $(arg tf_period)" />
+	<node name="externalToMap" pkg="tf" type="static_transform_publisher" args=" $(arg tf_x) $(arg tf_y) $(arg tf_z) $(arg tf_qx) $(arg tf_qy) $(arg tf_qz) $(arg tf_parentFrameId) $(arg tf_childFrameId) $(arg tf_period)" />
 </launch>

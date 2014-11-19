@@ -11,7 +11,8 @@ PUB_POSE = None
 LISTENING_STATE = "MINIMAL"
 
 def poseCallback(message):
-    pass
+    goto(message.x, message.y, frame="/openi_depth_frame")
+    # (x, y, yaw = 0, frame = "/map"):
 
 def voiceCallback(message):
     global LISTENING_STATE
@@ -39,7 +40,7 @@ def timeout():
 if __name__=="__main__":
     try:
         rospy.init_node("command_interpreter")
-        rospy.Subscriber('/wildcat_detected_poses', String, poseCallback)
+        rospy.Subscriber('/wildcat_detected_poses', Point, poseCallback)
         rospy.Subscriber('/recognizer/output', String, voiceCallback)
         rospy.spin()
     except rospy.ROSInterruptException: pass
