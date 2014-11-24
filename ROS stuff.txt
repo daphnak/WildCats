@@ -6,7 +6,8 @@ rosrun map_server map_server /home/turtlebot/WildCats/maps/003d.map.pgm 0.025
 roslaunch turtlebot_bringup minimal.launch
 
 roslaunch turtlebot_bringup 3dsensor.launch
-
+	(included in turtlebot_nav)
+	
 
 key-joystick:
  roslaunch kobuki_keyop keyop.launch
@@ -17,7 +18,9 @@ rosrun robot_pose_ekf robot_pose_ekf
 
 navigation:
 roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/WildCats/maps/003d.map.yaml
-To see naviagation in rviz: roslaunch turtlebot_rviz_launchers view_navigation.launch
+	NOTE: If above doesn't work because of problems with some nodelet not loading. Edit the amcl_demo.launch file to call 3dsensor with the additional arg scan_processing=false and see if that works
+
+roslaunch turtlebot_rviz_launchers view_navigation.launch
 
 
 

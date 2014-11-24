@@ -11,7 +11,7 @@ from tf.transformations import euler_from_quaternion, quaternion_from_euler
 
 
 
-def goto(x, y, yaw = 0, frame = "/map"):
+def goto(x, y, yaw = 0, frame = "/map", callback = None):
     client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
     client.wait_for_server()
 
@@ -30,8 +30,9 @@ def goto(x, y, yaw = 0, frame = "/map"):
     ps.pose.orientation.z = q[2]
     ps.pose.orientation.w = q[3]
     goal.target_pose = ps
-    client.send_goal(goal)
+    client.send_goal(goal, callback)
     client.wait_for_result(rospy.Duration.from_sec(5.0))
+
 
 
 
