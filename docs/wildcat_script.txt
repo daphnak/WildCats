@@ -1,0 +1,14 @@
+	On Softshell:
+1.$ roslaunch turtlebot_bringup minimal.launch
+2.$ roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/turtlebot/WildCats/maps/003d.map.yaml
+3.$ roslaunch pocketsphinx wildcat_commands.launch
+4.$ roslaunch sound_play soundplay_node.launch
+
+	Locally:
+4.$ setrobot softshell
+5.$ roslaunch turtlebot_rviz_launchers view_navigation.launch
+6.$ roslaunch kobuki_keyop keyop.launch
+7. <localize using rviz>
+8.$ roslaunch beginner_tutorials localhost_poseDetectionFull.launch
+9.$ rosrun beginner_tutorials commandInterpreter.py
+10.$ <calibrate self in front of kinect>
